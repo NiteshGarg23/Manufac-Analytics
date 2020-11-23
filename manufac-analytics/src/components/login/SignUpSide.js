@@ -74,7 +74,7 @@ export default function SignUpSide() {
       sessionStorage.setItem("manufac-username", username);
       sessionStorage.setItem("manufac-email", email);
       sessionStorage.setItem("manufac-password", password);
-      alert(sessionStorage.getItem('manufac-username') + " " + sessionStorage.getItem('manufac-email') + " " + sessionStorage.getItem('manufac-password'))
+      alert("Sign up successful!")
       history.push("/login")
     }
   }

@@ -73,7 +73,7 @@ export default function SignInSide() {
     else{
       sessionStorage.setItem("manufac-email", email);
       sessionStorage.setItem("manufac-password", password);
-      alert(sessionStorage.getItem('manufac-email') + " " + sessionStorage.getItem('manufac-password'))
+      alert("Login successful!")
       history.replace("/home")
     }
   }
