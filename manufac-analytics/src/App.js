@@ -5,6 +5,9 @@ import SignUpSide from './components/login/SignUpSide'
 import Home from './components/home/Home'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
+// layouts
+import HomepageLayout from './layouts/HomepageLayout'
+
 class App extends React.Component {
 	render() {
 	   return (
@@ -12,7 +15,11 @@ class App extends React.Component {
 				<Route exact path = "/" component = {SignInSide} />
 				<Route path = "/login" component = {SignInSide} />
 				<Route path = "/register" component = {SignUpSide} />
-				<Route path = "/home" component = {Home} />
+				<Route path = "/home" render={() => (
+					<HomepageLayout>
+						<Home />
+					</HomepageLayout>
+				)} />
 			</Router>
 	   )
 	}

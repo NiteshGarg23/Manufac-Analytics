@@ -1,11 +1,11 @@
 import React from "react"
 import { useHistory } from "react-router";
 import Button from '@material-ui/core/Button';
+
+// assets
 import Image from '../../assets/background.png'
 
 function Home(){
-
-    const username = sessionStorage.getItem("manufac-username")
 
     const history = useHistory()
 
@@ -20,21 +20,13 @@ function Home(){
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            height: '100vh'
+            //height: '100vh'
         }
     }
 
     return(
         <div style={styles.background}>
-            <header class="mui-appbar mui--z1">
-                <div class="mui-container">
-                    <table>
-                        <tr class="mui--appbar-height">
-                        <td class="mui--text-title"><h2>Hello {username}</h2></td>
-                        </tr>
-                    </table>
-                </div>
-            </header>
+            
             <div class="mui--text-center">
                 <h1>Welcome to Manufac Analytics!</h1>
                 <br />
